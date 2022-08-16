@@ -23,7 +23,7 @@ jobs:
       with:
         args: -e -am
         project: sfty_test
-        updatesite_path: https://update.talend.com/Studio/8/updates/latest
+        updatesite_path: http:///jenkins/userContent/
         service_url: https://tmc.us.cloud.talend.com/inventory/
         cloud_token: ${{ secrets.CLOUD_TOKEN }}
         nexus_url: http://192.168.1.95:8081
