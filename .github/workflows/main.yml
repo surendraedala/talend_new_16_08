@@ -4,7 +4,8 @@ jobs:
   build-and-publish-to-cloud:
     runs-on: ubuntu-latest
     steps:
-    # checkout the repo
+  
+      
     - name: 'Checkout Github Action'
       uses: actions/checkout@master
     
@@ -13,7 +14,7 @@ jobs:
       with:
         args: -e -am
         project: sfty_test
-        updatesite_path: https://update.talend.com/Studio/8/updates/latest
+        updatesite_path: http:///jenkins/userContent/
         service_url: https://tmc.us.cloud.talend.com/inventory/
         cloud_token: ${{ secrets.CLOUD_TOKEN }}
         nexus_url: http://192.168.1.95:8081
@@ -21,3 +22,4 @@ jobs:
         nexus_password: ${{ secrets.NEXUS_PASSWORD }}
        # license_path: license.gpg
        # license_passphrase: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+       
