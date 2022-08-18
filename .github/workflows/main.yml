@@ -4,7 +4,8 @@ jobs:
   build-and-publish-to-cloud:
     runs-on: ubuntu-latest
     steps:
-  
+    - name: Standard Checkout
+      uses: actions/checkout@v2
       
     - name: 'Checkout Github Action'
       uses: actions/checkout@master
